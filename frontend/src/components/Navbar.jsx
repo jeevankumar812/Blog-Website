@@ -16,9 +16,10 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-4 text-gray-800   ">
       {/* Show "Blog Website" only on Home page */}
       {location.pathname === "/" && (
-        <Link to="/" className="text-2xl font-bold text-green-600">
-          Blog Website
+        <Link to="/" className="text-2xl font-bold text-white">
+         Blog Website
         </Link>
+
       )}
 
       <div className="flex gap-4 text-lg items-center">
