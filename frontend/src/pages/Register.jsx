@@ -12,12 +12,11 @@ const quotes = [
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    username: "",
+    name: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
-
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -53,15 +52,13 @@ const Register = () => {
     setError("");
     setSuccess("");
 
-    const { username, email, password, confirmPassword } = formData;
-
-    if (password !== confirmPassword) {
+    if (formData.password !== formData.confirmPassword) {
       setError("Passwords do not match.");
       return;
     }
 
     try {
-      await authService.register({ username, email, password });
+      await authService.register(formData);
       setSuccess("Registration successful! Redirecting to login...");
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {
@@ -81,26 +78,26 @@ const Register = () => {
     >
       <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80"></div>
 
-      {/* Floating particles */}
+      {/* Floating particles (optional) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
             className="absolute bg-white rounded-full opacity-10"
             style={{
-              width: Math.random() * 4 + 2 + "px",
-              height: Math.random() * 4 + 2 + "px",
-              left: Math.random() * 100 + "%",
-              top: Math.random() * 100 + "%",
-              animationDelay: Math.random() * 3 + "s",
-              animation: "float 6s ease-in-out infinite",
+              width: Math.random() * 4 + 2 + 'px',
+              height: Math.random() * 4 + 2 + 'px',
+              left: Math.random() * 100 + '%',
+              top: Math.random() * 100 + '%',
+              animationDelay: Math.random() * 3 + 's',
+              animation: 'float 6s ease-in-out infinite',
             }}
           ></div>
         ))}
       </div>
 
       <div className="relative z-10 min-h-screen flex flex-col lg:flex-row">
-        {/* Left: Quote display */}
+        {/* Left: Quotes */}
         <div className="flex-1 flex flex-col justify-center items-start pl-8 md:pl-16 lg:pl-24 py-16 text-white">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
             Create Account
@@ -132,11 +129,11 @@ const Register = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input
                   type="text"
-                  name="username"
+                  name="name"
                   placeholder="Name"
                   className="w-full bg-white/5 border border-white/20 text-white placeholder-white/50 p-4 rounded-xl backdrop-blur-sm"
                   onChange={handleChange}
-                  value={formData.username}
+                  value={formData.name}
                   required
                 />
                 <input
