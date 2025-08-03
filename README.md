@@ -73,3 +73,46 @@ BlogWebsite/
 ├── package.json                     # Project metadata and scripts
 └── README.md                        # Documentation
 ```
+
+## 🖼️ Results
+
+---
+
+### 🏡 1. Home Page  
+<img src="./frontend/src/assets/b1.png" alt="Home Page" width="700"/>  
+<p align="left">🌐 <i>The <b>Home Page</b> showcases the latest blog posts along with navigation options for users to Register or Login.</i></p>  
+
+---
+
+### 📝 2. User Registration  
+<img src="./frontend/src/assets/b2.png" alt="Register Page" width="700"/>  
+<p align="left">🧾 <i>New users can register with their <b>Name, Email, Password, and Confirm Password</b>. The page also includes a dynamic Hero section with animated motivational quotes.</i></p>  
+
+---
+
+### 🔐 3. User Login  
+<img src="./frontend/src/assets/b3.png" alt="Login Page" width="700"/>  
+<p align="left">🔓 <i>Registered users can securely log in using their <b>Email and Password</b>.</i></p>  
+
+---
+
+### ✍️ 4. Create Blog Post  
+<img src="./frontend/src/assets/b4.png" alt="Create Post" width="700"/>  
+<p align="left">📝 <i>Users can create a new blog post by entering the <b>Title</b> and <b>Content</b>.</i></p>  
+
+---
+
+### 📤 5. Post Published  
+<img src="./frontend/src/assets/b5.png" alt="Post Created" width="700"/>  
+<p align="left">📌 <i>Once submitted, the user's post is displayed along with others on the platform.</i></p>  
+
+---
+
+### 💬 6. View Comments on Posts  
+<img src="./frontend/src/assets/b6.png" alt="Comments" width="700"/>  
+<p align="left">💡 <i>Users can read recent posts and actively engage by <b>adding comments</b> on blog posts.</i></p>  
+
+---
+
+> ✅ All pages are fully responsive and styled using Tailwind CSS for a modern, clean look.
+---
