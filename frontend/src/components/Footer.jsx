@@ -19,7 +19,7 @@ const Footer = () => {
         {/* Right Section: Social Links */}
         <div className="flex space-x-8 text-3xl">
           <a
-            href="https://github.com/your-github-username"
+            href="https://github.com/jeevankumar812"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition duration-200"
@@ -27,7 +27,7 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/your-linkedin-id"
+            href="https://www.linkedin.com/in/k-jeevan-kumar-5b540b266/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition duration-200"
