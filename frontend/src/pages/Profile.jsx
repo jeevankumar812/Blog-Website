@@ -8,19 +8,13 @@ const Profile = () => {
 
   if (!user) {
     return (
-      <div className="text-center mt-10 text-red-500">
+      <div className="flex items-center justify-center h-screen bg-black text-red-400 text-xl">
         You must be logged in to view your profile.
       </div>
     );
   }
 
-  return (
-    <div className="max-w-4xl mx-auto mt-10 p-6 bg-white rounded shadow">
-      <h2 className="text-3xl font-semibold mb-4">Welcome, {user.name}</h2>
-      <p className="mb-6 text-gray-600">Email: {user.email}</p>
-      <CreatePost />
-    </div>
-  );
+  return <CreatePost />;
 };
 
 export default Profile;

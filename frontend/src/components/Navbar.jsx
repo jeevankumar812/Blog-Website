@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogout = () => {
     logout();
@@ -12,8 +13,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-4  text-gray-800">
-      <Link to="/" className="text-2xl font-bold text-blue-600">Blog Website</Link>
+    <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-4 text-gray-800   ">
+      {/* Show "Blog Website" only on Home page */}
+      {location.pathname === "/" && (
+        <Link to="/" className="text-2xl font-bold text-green-600">
+          Blog Website
+        </Link>
+      )}
 
       <div className="flex gap-4 text-lg items-center">
         {user ? (
@@ -36,13 +42,13 @@ const Navbar = () => {
           <>
             <Link
               to="/login"
-              className="px-4 py-1 rounded-lg border border-white  text-white  hover:bg-black hover:text-white transition"
+              className="px-4 py-1 rounded-lg border border-white text-white hover:bg-black hover:text-white transition"
             >
               Login
             </Link>
             <Link
               to="/register"
-              className="px-4 py-1 rounded-lg border border-white bg-white text-black  hover:bg-black hover:text-white transition"
+              className="px-4 py-1 rounded-lg border border-white bg-white text-black hover:bg-black hover:text-white transition"
             >
               Register
             </Link>
