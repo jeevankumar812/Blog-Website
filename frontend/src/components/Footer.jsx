@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
         {/* Left Section: Name & College */}
         <div className="text-center md:text-left">
-          <h2 className="text-3xl font-bold text-blue-400">K Jeevan Kumar</h2>
+          <h2 className="text-3xl text-white">K Jeevan Kumar</h2>
           <h3 className="text-lg font-semibold text-gray-300 mt-2">
             Final Year B.E. | Alva's Institute of Engineering & Technology
           </h3>
@@ -35,7 +35,7 @@ const Footer = () => {
             <FaLinkedin />
           </a>
           <a
-            href="mailto:your-email@example.com"
+            href="mailto:jeevanjeevan63643@gmail.com"
             className="hover:text-blue-500 transition duration-200"
           >
             <FaEnvelope />
