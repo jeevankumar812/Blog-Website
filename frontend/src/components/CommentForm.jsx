@@ -1,3 +1,4 @@
+// src/components/CommentForm.jsx
 import React, { useState } from "react";
 
 const CommentForm = ({ onSubmit }) => {

@@ -1,3 +1,4 @@
+// src/pages/Register.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import authService from "../services/authService";
@@ -22,12 +23,15 @@ const Register = () => {
       alert("Passwords do not match");
       return;
     }
+
     try {
-      await authService.register(formData);
-      alert("Registered successfully!");
+      const response = await authService.register(formData);
+      alert(response.message || "Registered successfully!");
       navigate("/login");
     } catch (err) {
-      alert("Registration failed");
+      const errorMessage =
+        err.response?.data?.message || "Registration failed. Try again.";
+      alert(errorMessage);
     }
   };
 
@@ -41,6 +45,7 @@ const Register = () => {
           placeholder="Name"
           className="w-full border p-2 mb-4 rounded"
           onChange={handleChange}
+          value={formData.name}
           required
         />
         <input
@@ -49,6 +54,7 @@ const Register = () => {
           placeholder="Email"
           className="w-full border p-2 mb-4 rounded"
           onChange={handleChange}
+          value={formData.email}
           required
         />
         <input
@@ -57,6 +63,7 @@ const Register = () => {
           placeholder="Password"
           className="w-full border p-2 mb-4 rounded"
           onChange={handleChange}
+          value={formData.password}
           required
         />
         <input
@@ -65,6 +72,7 @@ const Register = () => {
           placeholder="Confirm Password"
           className="w-full border p-2 mb-4 rounded"
           onChange={handleChange}
+          value={formData.confirmPassword}
           required
         />
         <button

@@ -1,3 +1,4 @@
+// src/pages/Login.jsx
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import authService from "../services/authService";
@@ -17,9 +18,11 @@ const Login = () => {
     try {
       const user = await authService.login(formData);
       login(user);
-      navigate("/");
+      navigate("/profile");
     } catch (err) {
-      alert("Login failed. Please check credentials.");
+      const errorMessage =
+        err.response?.data?.message || "Login failed. Please check credentials.";
+      alert(errorMessage);
     }
   };
 

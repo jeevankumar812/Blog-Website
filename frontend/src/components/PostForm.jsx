@@ -1,3 +1,4 @@
+// src/components/PostForm.jsx
 import React, { useState, useEffect } from "react";
 
 const PostForm = ({ initialData = { title: "", content: "" }, onSubmit }) => {
@@ -13,14 +14,12 @@ const PostForm = ({ initialData = { title: "", content: "" }, onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.title || !formData.content) return;
     onSubmit(formData);
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <input
-        type="text"
         name="title"
         value={formData.title}
         onChange={handleChange}
