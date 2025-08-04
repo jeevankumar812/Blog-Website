@@ -55,7 +55,7 @@ const Hero = () => {
 
           <div className="absolute bottom-10 left-10">
             <p className="text-gray-200 text-lg sm:text-xl md:text-2xl font-light leading-relaxed max-w-3xl mb-12">
-              Turn your ideas into impactful stories. Make your voice heard with{" "}
+              Turn your ideas into impactful stories . Make your voice heard with{" "}
               <span className="font-semibold text-white">Blog Website</span>.
             </p>
 
