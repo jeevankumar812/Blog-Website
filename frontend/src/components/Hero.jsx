@@ -67,12 +67,6 @@ const Hero = () => {
                 Learn More
               </button>
 
-              <Link
-                to="/"
-                className="px-5 py-2 rounded-lg border border-white bg-white text-black text-center hover:bg-black hover:text-white transition duration-200"
-              >
-                Explore More
-              </Link>
             </div>
           </div>
 
