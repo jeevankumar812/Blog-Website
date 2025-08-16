@@ -1,7 +1,7 @@
 
 # 📝 Blog Website - MERN Stack
 
-### 👨‍🎓 **Project By:**  
+### 👨‍🎓 **Project By :**  
 **K Jeevan Kumar**  
 🎓 **Final Year, Computer Science & Engineering**  
 🏫 **Alva's Institute of Engineering & Technology**  
